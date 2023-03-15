@@ -1,1 +1,15 @@
-
+server:
+  port: 9002
+  servlet:
+    session:
+      cookie:
+        name: KSESSION
+security:
+  oauth2:
+    client:
+      client-id: demo
+      client-secret: 123
+      user-authorization-uri: http://localhost:9191/oauth/authorize
+      access-token-uri: http://localhost:9191/oauth/token
+    resource:
+      token-info-uri: http://localhost:9191/oauth/check_token
